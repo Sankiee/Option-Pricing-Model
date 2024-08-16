@@ -3,7 +3,7 @@
 ## 1. Importing Required Libraries
 The script starts by importing the necessary Python libraries:
 
-- **`csv`**: To read the market data from CSV files.
+- **`csv`**: To read the market data from the CSV file.
 - **`datetime`**: To handle date differences for calculating time to expiration.
 - **`math`**: For mathematical functions like exponentiation, logarithms, and square roots.
 - **`scipy.stats`**: To calculate the cumulative distribution function (CDF) for a standard normal distribution.
@@ -31,7 +31,7 @@ The function `bs_ce(s, k, t)` calculates the theoretical price of a call option 
 - **`date_diff(date1, date2)`**: Calculates the difference in days between two dates provided in the format `DD-MMM-YYYY`.
 
 ## 5. Reading and Processing Data
-The function `read(file)` reads a CSV file and processes the data to extract relevant information for option pricing:
+The function `read(file)` reads the CSV file "NIFTY ALL JAN-MAR.csv" and processes the data to extract relevant information for option pricing:
 
 - The function skips rows with missing data or low volume.
 - It calculates the time to expiration in days, converts it to years, and computes the option price using the Black-Scholes formula.
@@ -48,9 +48,9 @@ The function `analysis(data)` performs statistical analysis on the processed dat
 The script uses `matplotlib` to scatter plot the deviations for each option. This helps in visually assessing the accuracy of the Black-Scholes model.
 
 ## 8. Main Execution
-The script processes multiple CSV files, performs the analysis for each, and prints the results:
+The script processes the CSV file "NIFTY ALL JAN-MAR.csv", performs the analysis, and prints the results:
 
-- **`file_list`**: A list of CSV filenames that the script will process.
+- **`file_list`**: A list containing the CSV filename "NIFTY ALL JAN-MAR.csv" that the script will process.
 - The script outputs the standard deviation of deviations for all options, OTM options, and ITM options, along with the maximum deviation.
 
 ## 9. Results Interpretation
